@@ -1,0 +1,113 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap');
+:root {
+    --dark-olive: #5A6334;
+    --light-olive: #878F61;
+    --olive: #B5BAA1;
+}
+body {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: var(--olive);
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-align: center;
+    color: var(--dark-olive);
+}
+
+.about {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bottle {
+        position: relative;
+    }
+    &__title {
+        padding: 90px 0;
+    }
+    &::after {
+        display: block;
+        content: "";
+        background: url("../img/background.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 120px;
+        z-index: -1;
+    }
+    &__branch {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+}
+.list {
+    padding: 30px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+    &__item {
+        width: 240px;
+        height: 180px;
+        list-style: none;
+        background: var(--dark-olive, #5A6334);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+        position: relative;
+    }
+    &__item::after {
+        display: block;
+        content: "";
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        position: absolute;
+        top: 15px;
+        left: 16px;
+        border: 3px solid var(--light-olive, #878F61);
+    }
+    &__item:nth-child(4)::before {
+        display: block;
+        content: "";
+        width: 75px;
+        height: 76px;
+        position: absolute;
+        top: -50px;
+        left: -45px;
+        background: url("../img/olive2.png") no-repeat;
+        z-index: -1;
+    }
+    &__item:nth-child(3)::before {
+        display: block;
+        content: "";
+        width: 128px;
+        height: 135px;
+        position: absolute;
+        top: -100px;
+        right: -10px;
+        background: url("../img/olive3.png") no-repeat;
+        z-index: -1;
+    }
+    &__item:nth-child(1)::before {
+        display: block;
+        content: "";
+        width: 128px;
+        height: 135px;
+        position: absolute;
+        bottom: -90px;
+        right: -70px;
+        background: url("../img/olive1.png") no-repeat;
+        z-index: -1;
+    }
+}
